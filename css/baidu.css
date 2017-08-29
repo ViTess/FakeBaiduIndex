@@ -1,0 +1,406 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container{/* 主体内容 */
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 100%;
+    min-height: 600px;
+}
+
+img{
+    padding: 0;
+}
+
+.container_main_wrapper{/* 目的是让container_main居中 */
+    position: relative;
+    top: 38.2%;
+}
+
+.container_main{/* 中间主要布局（logo、搜索框） */
+    position:relative;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+    top: -191px;/* 让中间布局稍微向上一点 */
+}
+
+.form_search{
+    margin-top: 22px;/* 顶部留空一点位置 */
+    margin-bottom: 0;
+    font-size: 0;
+}
+
+.span_input_search{
+    position: relative;
+    border: 1px solid #b6b6b6;
+    border-right-color: transparent;
+    display: inline-block;/* inline不换行，block可以设置width、height，但是有缺陷，有空隙 */
+    margin: 0;
+    padding: 0;
+    height: 34px;
+}
+
+.span_input_search:hover{/* 设置鼠标进入时的变化 */
+    border-top:1px solid #999;
+    border-left: 1px solid #999;
+    border-right-color: transparent;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.span_input_search_inputfocus{/* 此处需要js处理，输入框获取到焦点后，切换该css */
+    position: relative;
+    border: 1px solid #3385ff;
+    border-right-color: transparent;
+    display: inline-block;/* inline不换行，block可以设置width、height，但是有缺陷，有空隙 */
+    margin: 0;
+    padding: 0;
+    height: 34px;
+}
+
+.span_input_soutu{
+    background: url("../images/bd_soutu.png") no-repeat;
+    width: 18px;
+    height: 16px;
+    position: absolute;
+    right: 11px;
+    margin-top: 8px;
+    cursor: pointer;/* 鼠标样式 */
+}
+
+.span_input_soutu:hover{
+    background-position: 0 -20px;
+}
+
+.input_search{
+    font-size: 16px;
+    border: 0;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    height: 22px;
+    width: 526px;
+    background: transparent;
+    outline-color: transparent;/* 设置轮廓 */
+    outline-style: none;
+    outline-width: 0;
+}
+
+.input_submit{
+    background: #3385ff;
+    color: #fff;
+    height: 36px;
+    width: 100px;
+    font-size: 15px;
+    letter-spacing: 1px;/* 设置文字间的间隙 */
+    border: 0;
+    border-bottom: 1px solid #2d78f4;
+    outline:none 0 transparent;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+.input_submit:hover{
+    background: #317ef3;
+    border-bottom:1px solid #2868c8;
+    box-shadow: 1px 1px 1px #ccc;/* 设置阴影，参数分别是水平方向位置、垂直方向位置、模糊距离、阴影颜色 */
+}
+
+.input_submit:active{/* 鼠标点击时 */
+    background:#3075dc;
+    box-shadow:1px 1px 5px #2964bb inset;
+}
+
+.navigation_bar_root{
+    position: absolute;
+    right: 0;
+    margin-top: 19px;
+    margin-bottom: 5px;
+    padding-right: 96px; 
+}
+
+.navigation_bar_more{
+    display: block;
+    font-weight: normal;
+    margin-left: 20px;
+    line-height: 24px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration:none;
+    background: #38f;
+    width: 60px;
+    text-align: center;
+    margin-left: 19px;
+    margin-right: 2px;
+    right: 10px; /* 设置absolute在navigation_bar_root中绝对定位，然后设置距右边10px*/
+    position: absolute; /* 这样不管navigation_bar_root的长度如何，该元素的位置始终不变 */
+}
+
+.navigation_bar_more_hover{
+    background: 0 0;
+    color: #333;
+}
+
+.navigation_bar_item{
+    font-weight: 700;
+    margin-left: 20px;
+    line-height: 24px;
+    color: #333;
+    font-size: 13px;
+    text-decoration: underline;/* 下划线 */
+    float: left;
+    cursor: pointer;
+}
+
+.navigation_bar_item_thin{
+    font-weight: normal;
+    margin-left: 20px;
+    line-height: 24px;
+    color: #333;
+    font-size: 13px;
+    text-decoration: underline;/* 下划线 */
+    float: left;
+    cursor: pointer;
+}
+
+.navigation_bar_item:hover,
+.navigation_bar_item_thin:hover{
+    color: #00c;
+}
+
+.navigation_bar_setting{
+    font-weight: normal;
+    margin-left: 20px;
+    line-height: 24px;
+    color: #333;
+    font-size: 13px;
+    float: left;
+    text-decoration: underline;/* 下划线 */
+}
+
+.navigation_bar_setting:hover{
+    color: #00c;
+}
+
+.setting_dropdown{
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    border: 1px solid #d1d1d1;
+    background: #fff;
+    box-shadow:1px 1px 5px #d1d1d1;/*水平、垂直、模糊距离、颜色*/
+}
+
+.setting_dropdown a{
+    display: block;/*此元素将显示为块级元素，此元素前后会带有换行符。*/
+    color: #333;
+    line-height: 26px;
+    height: 100%;
+    text-decoration: none;
+    text-align:center;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+.setting_dropdown a:hover{
+    color: #fff;
+    background: #317ef3;
+}
+
+.setting_dropdown_arrow arrowborder,
+.setting_dropdown_arrow arrow{
+    display: block;
+    position: absolute;
+    border: 5px solid transparent;
+    border-style: dashed dashed solid;
+    margin-left: -5px;
+}
+
+/* 让灰色底色的三角形上移1px，在原来位置上罩上白色三角形，看起来就像三角形有边框一样 */
+.setting_dropdown_arrow arrowborder{
+    border-bottom-color: #d8d8d8;
+    top: -1px;
+}
+
+.setting_dropdown_arrow arrow{
+    border-bottom-color: #fff;
+    top: 0;
+}
+
+.setting_dropdown_arrow{
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+}
+
+.more_slide_root{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #f9f9f9;
+    border-left: 1px solid #e7e7e7;
+    width: 85px;
+    text-align: center;
+}
+
+.more_slide_root div{
+    display: block;
+    text-align: center;
+}
+
+.more_slide_root .slide_title{
+    padding-top: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: normal;
+    width: 66px;
+    line-height: 43px;
+    background: 0 0;
+    color: #333;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.more_slide_root .wrapper{
+    /* display: block;
+    text-align: center; */
+}
+
+.more_slide_root a{
+    display:block;
+    text-align:center;
+    width:66px;
+    height:76px;
+    margin:0 auto;
+    border-bottom:#f0f0f0 1px solid;
+    color:#666;
+    text-decoration:none;
+    overflow:hidden;/*将溢出布局隐藏，这里加上这个，才使得布局显示显得居中，否则布局被撑开？*/
+    font-size: 12px;
+}
+
+.more_slide_root a:hover{
+    text-decoration: underline;
+}
+
+.more_slide_root a span{
+    background: url("../images/bd_slide_bar.png") no-repeat;
+    width:36px;
+    height:36px;
+    display:block;
+    margin:10px auto 5px;
+    text-align:center;
+}
+
+.more_slide_root a span.slide_nuomi{
+    background-position: 0 0;
+}
+
+.more_slide_root a span.slide_music{
+    width: 40px;/*音乐图标较大*/
+    background-position: -72px 0;
+}
+
+.more_slide_root a span.slide_pic{
+    background-position: -112px 0;
+}
+
+.more_slide_root a span.slide_know{
+    background-position: -36px 0;
+}
+
+.more_slide_root a span.slide_article{
+    background-position: -148px 0;
+}
+
+.more_slide_root a span.slide_top{
+    background-position: -184px 0;
+}
+
+.more_slide_root a.footer{
+    margin-top: 15px;
+    border: 0;
+    text-decoration: underline;
+}
+
+.qrcode_root{
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    line-height: 23px;
+}
+
+.qrcode_root span{
+    display: block;
+    background: url("../images/qrcode.png") no-repeat;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+
+.bottom p{
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #999;
+    font-size: 12px;
+}
+
+.bottom p a{
+    color: #999;
+}
+
+.bottom .wrapper_top a{
+    margin-left: 11px;
+    margin-right: 11px;
+}
+
+.bottom .icon1{
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    overflow: hidden;
+    background: url("../images/global.png") no-repeat;
+    width: 14px;
+    height: 17px;
+    margin-left: 3px;
+    margin-right: 20px;
+    background-position: -600px -96px;
+    text-align: center;
+}
+
+.bottom .icon2{
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    overflow: hidden;
+    background: url("../images/global.png") no-repeat;
+    width: 14px;
+    height: 17px;
+    margin-left: 3px;
+    margin-right: 20px;
+    background-position: -623px -96px;
+    text-align: center;
+}

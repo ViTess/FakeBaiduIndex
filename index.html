@@ -1,0 +1,91 @@
+<!DOCTYPE html/>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="百度" />
+    <title>百度一下，你就知道</title>
+
+    <link rel="stylesheet" type="text/css" href="css/baidu.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- 右侧标题栏 -->
+        <div class="navigation_bar_root">
+            <a href="#" class="navigation_bar_item">新闻</a>
+            <a href="#" class="navigation_bar_item">hao123</a>
+            <a href="#" class="navigation_bar_item">地图</a>
+            <a href="#" class="navigation_bar_item">视频</a>
+            <a href="#" class="navigation_bar_item">贴吧</a>
+            <a href="#" class="navigation_bar_item">学术</a>
+            <a href="#" class="navigation_bar_item_thin">登录</a>
+            <a href="#" id="bar_setting" class="navigation_bar_setting" onmouseover="showSettingMenu(this)" onmouseout="hideSettingMenu(this)">设置</a>
+            <a href="#" id="bar_more" class="navigation_bar_more" onmouseover="showMoreSlide()">更多产品</a>
+        </div>
+
+        <!-- 中间icon、搜索框 -->
+        <div class="container_main_wrapper">
+            <div class="container_main">
+                <img src="images/bd_logo1.png" width="270" height="129" />
+                <form class="form_search">
+                    <span id="span_search" class="span_input_search">
+                        <span class="span_input_soutu"></span>
+                        <input class="input_search" onblur="inputSearchLostFocus()" onfocus="inputSearchFocus()"/>
+                    </span>
+                    <input type="submit" value="百度一下" class="input_submit" />
+                </form>
+            </div>
+        </div>
+
+        <!-- 设置下拉框 -->
+        <div id="setting_menu" class="setting_dropdown" onmouseout="hideSettingMenu(this)">
+            <!-- 箭头 -->
+            <div class="setting_dropdown_arrow">
+                <arrowborder></arrowborder>
+                <arrow></arrow>
+            </div>
+            <a href="javascript:void(0)">搜索设置</a>
+            <a href="javascript:void(0)">高级搜索</a>
+            <a href="javascript:void(0)">关闭预测</a>
+            <a href="javascript:void(0)">搜索历史</a>
+        </div>
+
+        <!-- 更多产品侧边栏 -->
+        <div id="more_slide" class="more_slide_root">
+            <div id="more_slide_title" class="slide_title">更多产品</div>
+            <a href="javascript:void(0)"><span class="slide_nuomi"></span>糯米</a>
+            <a href="javascript:void(0)"><span class="slide_music"></span>音乐</a>
+            <a href="javascript:void(0)"><span class="slide_pic"></span>图片</a>
+            <a href="javascript:void(0)"><span class="slide_know"></span>知道</a>
+            <a href="javascript:void(0)"><span class="slide_article"></span>文库</a>
+            <a href="javascript:void(0)"><span class="slide_top"></span>风云榜</a>
+            <a href="javascript:void(0)" class="footer">全部产品>></a>
+        </div>
+
+        <!-- 二维码 -->
+        <div class="qrcode_root"><span></span>手机百度</div>
+
+        <!-- 底部声明 -->
+        <div class="bottom">
+            <p class="wrapper_top">
+                <a href="javascript:void(0)">把百度设为主页</a>
+                <a href="javascript:void(0)">关于百度</a>
+                <a href="javascript:void(0)">About Baidu</a>
+                <a href="javascript:void(0)">百度推广</a>
+            </p>
+            <p>
+                <span>©2017 Baidu</span>
+                <a href="javascript:void(0)">使用百度前必读</a>
+                <a href="javascript:void(0)">意见反馈</a>
+                <span>京ICP证030173号</span><span class="icon1"></span>
+                <a href="javascript:void(0)">京公网安备11000002000001号</a><span class="icon2"></span>
+            </p>
+        </div>
+    </div>
+</body>
+
+<script src="js/baidu.js"></script>
+
+</html>
